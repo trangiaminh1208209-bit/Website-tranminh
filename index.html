@@ -1,472 +1,807 @@
-
 <!DOCTYPE html>
+
 <html lang="vi">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Trần Gia Minh | Personal Website</title>
 
 <style>
+
 :root {
+
     --red: #651B2D;
+
     --ruby: #C62846;
+
     --light-red: #FCECEF;
+
     --white: #FFFFFF;
+
     --ivory: #FFF9F9;
+
     --text: #34252A;
+
     --muted: #76666B;
+
 }
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
     scroll-behavior: smooth;
+
 }
 
 body {
+
     font-family: Arial, Helvetica, sans-serif;
+
     background: var(--ivory);
+
     color: var(--text);
+
     line-height: 1.7;
+
 }
 
 header {
+
     background: var(--red);
+
     padding: 18px 8%;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     flex-wrap: wrap;
+
     gap: 15px;
+
     border-bottom: 3px solid #E7B9C3;
+
 }
 
 .logo {
+
     color: white;
+
     font-size: 22px;
+
     font-weight: bold;
+
     letter-spacing: 2px;
+
 }
 
 nav {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 20px;
+
 }
 
 nav a {
+
     color: #FFF0F2;
+
     text-decoration: none;
+
     font-size: 14px;
+
     transition: 0.3s;
+
 }
 
 nav a:hover {
+
     color: #F5B9C6;
+
 }
 
 .hero {
+
     min-height: 470px;
+
     padding: 110px 8%;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
     align-items: center;
+
     text-align: center;
+
     color: white;
+
     background:
+
         radial-gradient(circle at top right, #A43B55, transparent 45%),
+
         linear-gradient(135deg, #651B2D, #35101B);
+
 }
 
 .hero .small-title {
+
     color: #F5C6D0;
+
     letter-spacing: 4px;
+
     font-size: 13px;
+
     margin-bottom: 15px;
+
 }
 
 .hero h1 {
+
     font-size: clamp(32px, 6vw, 55px);
+
     margin-bottom: 15px;
+
     color: white;
+
 }
 
 .hero p {
+
     color: #FCECEF;
+
     font-size: 17px;
+
 }
 
 .hero button {
+
     margin-top: 28px;
+
     padding: 13px 30px;
+
     border: 1px solid white;
+
     border-radius: 30px;
+
     background: white;
+
     color: var(--red);
+
     font-weight: bold;
+
     cursor: pointer;
+
     transition: 0.3s;
+
 }
 
 .hero button:hover {
+
     background: var(--light-red);
+
 }
 
 section {
+
     padding: 75px 8%;
+
 }
 
 .section-title {
+
     text-align: center;
+
     color: var(--red);
+
     font-size: 30px;
+
     margin-bottom: 12px;
+
 }
 
 .section-subtitle {
+
     text-align: center;
+
     color: var(--muted);
+
     margin-bottom: 40px;
+
     font-size: 14px;
+
 }
 
 .gold-line {
+
     width: 65px;
+
     height: 3px;
+
     background: var(--ruby);
+
     margin: 15px auto 35px;
+
 }
 
 .about {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 50px;
+
     flex-wrap: wrap;
+
 }
 
 .avatar {
+
     width: 220px;
+
     height: 220px;
+
     object-fit: cover;
+
     border-radius: 50%;
+
     border: 5px solid var(--ruby);
+
     box-shadow: 0 10px 30px rgba(101,27,45,0.15);
+
 }
 
 .about-content {
+
     max-width: 520px;
+
     background: white;
+
     padding: 30px;
+
     border-radius: 16px;
+
     border-left: 4px solid var(--ruby);
+
     box-shadow: 0 8px 25px rgba(101,27,45,0.07);
+
 }
 
 .about-content h3 {
+
     color: var(--red);
+
     font-size: 25px;
+
     margin-bottom: 15px;
+
 }
 
 .about-content p {
+
     margin: 9px 0;
+
 }
 
 .about-content strong {
+
     color: var(--red);
+
 }
 
 .cards {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
     gap: 25px;
+
 }
 
 .card {
+
     background: white;
+
     border-radius: 16px;
+
     overflow: hidden;
+
     border: 1px solid #F0D8DE;
+
     box-shadow: 0 8px 25px rgba(101,27,45,0.06);
+
     transition: 0.3s;
+
 }
 
 .card:hover {
+
     transform: translateY(-7px);
+
     box-shadow: 0 15px 30px rgba(101,27,45,0.12);
+
     border-color: var(--ruby);
+
 }
 
 .card img {
+
     width: 100%;
+
     height: 210px;
+
     object-fit: cover;
+
+    display: block;
+
 }
 
 .card-content {
+
     padding: 20px;
+
     text-align: center;
+
 }
 
 .card h3 {
+
     color: var(--red);
+
     font-size: 21px;
+
     margin-bottom: 8px;
+
 }
 
 .card p {
+
     color: var(--muted);
+
     font-size: 14px;
+
 }
 
 .subject-card {
+
     padding: 35px 20px;
+
     text-align: center;
+
     border-top: 4px solid var(--ruby);
+
 }
 
 .subject-card h3 {
+
     font-size: 22px;
+
 }
 
 .video-box {
+
     max-width: 900px;
+
     margin: auto;
+
     padding: 15px;
+
     background: var(--red);
+
     border: 2px solid #E7B9C3;
+
     border-radius: 18px;
+
     box-shadow: 0 12px 30px rgba(101,27,45,0.15);
+
 }
 
 video {
+
     width: 100%;
+
     display: block;
+
     border-radius: 10px;
+
 }
 
 .links {
+
     display: flex;
+
     justify-content: center;
+
     flex-wrap: wrap;
+
     gap: 18px;
+
 }
 
 .links a {
+
     display: inline-block;
+
     padding: 14px 26px;
+
     background: var(--red);
+
     border: 1px solid var(--ruby);
+
     border-radius: 10px;
+
     color: white;
+
     text-decoration: none;
+
     font-weight: bold;
+
     transition: 0.3s;
+
 }
 
 .links a:hover {
+
     background: var(--ruby);
+
 }
 
 footer {
+
     text-align: center;
+
     padding: 30px 15px;
+
     background: var(--red);
+
     color: white;
+
     border-top: 3px solid #E7B9C3;
+
 }
 
 footer span {
+
     color: #FFD4DD;
+
 }
 
 @media (max-width: 650px) {
+
     header {
+
         justify-content: center;
+
     }
 
     nav {
+
         justify-content: center;
+
         gap: 13px;
+
     }
 
     .hero {
+
         padding: 85px 6%;
+
     }
 
     section {
+
         padding: 55px 6%;
+
     }
 
     .about-content {
+
         padding: 23px;
+
     }
+
 }
+
 </style>
+
 </head>
 
 <body>
 
 <header>
+
     <div class="logo">GIA MINH.</div>
 
     <nav>
+
         <a href="#home">Trang chủ</a>
+
         <a href="#about">Giới thiệu</a>
+
         <a href="#hobbies">Sở thích</a>
+
         <a href="#subjects">Môn học</a>
+
         <a href="#video">Video</a>
+
         <a href="#links">Liên kết</a>
+
     </nav>
+
 </header>
 
 <!-- TRANG CHỦ -->
+
 <div class="hero" id="home">
+
     <div class="small-title">WELCOME TO MY WEBSITE</div>
+
     <h1>TRẦN GIA MINH</h1>
+
     <p>Chào mừng bạn đến với không gian cá nhân của mình.</p>
+
     <p>Học hỏi · Trải nghiệm · Khám phá</p>
 
     <button onclick="document.getElementById('about').scrollIntoView()">
+
         KHÁM PHÁ NGAY
+
     </button>
+
 </div>
 
 <!-- GIỚI THIỆU -->
+
 <section id="about">
+
     <h2 class="section-title">Giới thiệu bản thân</h2>
+
     <div class="gold-line"></div>
 
     <div class="about">
+
         <img
+
             class="avatar"
-            src="images/anh-dai-dien.jpg.jpeg"
+
+            src="./images/anh-dai-dien.jpg"
+
             alt="Ảnh đại diện Trần Gia Minh"
+
         >
 
         <div class="about-content">
+
             <h3>Trần Gia Minh</h3>
+
             <p><strong>Ngày sinh:</strong> 12/08/2009</p>
+
             <p><strong>Sở thích:</strong> Cầu lông, đá bóng, chạy bộ</p>
+
             <p><strong>Môn học yêu thích:</strong> Toán, Vật lý, Tiếng Anh</p>
+
             <p>
+
                 Mình yêu thích thể thao, luôn muốn học hỏi,
+
                 trải nghiệm những điều mới và phát triển bản thân
+
                 qua từng ngày.
+
             </p>
+
         </div>
+
     </div>
+
 </section>
 
 <!-- SỞ THÍCH -->
+
 <section id="hobbies">
+
     <h2 class="section-title">Sở thích của mình</h2>
+
     <p class="section-subtitle">Những hoạt động mình yêu thích</p>
+
     <div class="gold-line"></div>
 
     <div class="cards">
 
         <div class="card">
-            <img
-                src="images/cau-long.jpg"
-                alt="Cầu lông"
-            >
+
+            <img src="./images/cau-long.jpg" alt="Cầu lông">
+
             <div class="card-content">
+
                 <h3>Cầu lông</h3>
+
                 <p>
+
                     Giúp mình rèn luyện sức khỏe,
+
                     sự nhanh nhẹn và tinh thần đồng đội.
+
                 </p>
+
             </div>
+
         </div>
 
         <div class="card">
-            <img
-                src="images/da-bong.jpg"
-                alt="Đá bóng"
-            >
+
+            <img src="./images/da-bong.jpg" alt="Đá bóng">
+
             <div class="card-content">
+
                 <h3>Đá bóng</h3>
+
                 <p>
+
                     Mình yêu thích tinh thần đồng đội
+
                     và sự phối hợp trong bóng đá.
+
                 </p>
+
             </div>
+
         </div>
-        
+
+        <div class="card">
+
+            <img src="./images/chay-bo.jpg" alt="Chạy bộ">
+
+            <div class="card-content">
+
+                <h3>Chạy bộ</h3>
+
+                <p>
+
+                    Giúp mình duy trì năng lượng,
+
+                    sự kiên trì và tinh thần tích cực.
+
+                </p>
+
+            </div>
+
+        </div>
+
     </div>
+
 </section>
 
 <!-- MÔN HỌC -->
+
 <section id="subjects">
+
     <h2 class="section-title">Môn học yêu thích</h2>
+
     <div class="gold-line"></div>
 
     <div class="cards">
 
         <div class="card subject-card">
+
             <h3>Toán học</h3>
+
             <p>Phát triển tư duy logic và khả năng giải quyết vấn đề.</p>
+
         </div>
 
         <div class="card subject-card">
+
             <h3>Vật lý</h3>
+
             <p>Khám phá những quy luật và hiện tượng trong tự nhiên.</p>
+
         </div>
 
         <div class="card subject-card">
+
             <h3>Tiếng Anh</h3>
+
             <p>Mở rộng kiến thức và kết nối với thế giới.</p>
+
         </div>
 
     </div>
+
 </section>
 
 <!-- VIDEO -->
+
 <section id="video">
+
     <h2 class="section-title">Video của mình</h2>
+
     <div class="gold-line"></div>
 
     <div class="video-box">
+
         <video controls playsinline>
-            <source src="video.mp4" type="video/mp4">
+
+            <source src="./video.mp4" type="video/mp4">
+
             Trình duyệt không hỗ trợ video.
+
         </video>
+
     </div>
+
 </section>
 
 <!-- LIÊN KẾT -->
+
 <section id="links">
+
     <h2 class="section-title">Liên kết yêu thích</h2>
+
     <p class="section-subtitle">Một số trang web mình quan tâm</p>
+
     <div class="gold-line"></div>
 
     <div class="links">
+
         <a href="https://bwfbadminton.com/"
+
            target="_blank" rel="noopener">
+
             BWF Official
+
         </a>
 
         <a href="https://www.facebook.com/bwfbadminton"
+
            target="_blank" rel="noopener">
+
             Facebook BWF
+
         </a>
 
         <a href="https://vn.canon/"
+
            target="_blank" rel="noopener">
+
             Canon Việt Nam
+
         </a>
+
     </div>
+
 </section>
 
 <!-- CHÂN TRANG -->
+
 <footer>
+
     <p>© 2026 <span>Trần Gia Minh</span></p>
+
     <p>PERSONAL WEBSITE</p>
+
 </footer>
 
 </body>
+
 </html>
